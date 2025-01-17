@@ -5,5 +5,7 @@ __pycache__/
 .idea/
 *.log
 *.out
+*.ipynb_checkpoints
+
 
 
