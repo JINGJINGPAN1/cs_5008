@@ -47,9 +47,13 @@ void swap(HeapNode* a, HeapNode* b) {
 void heapifyUp(MinHeap* heap, int index) {
     while (index > 0) {
         int parent = (index - 1) / 2;
-        if (heap->arr[parent].processingTime < heap->arr[index].processingTime) break;
+        if (heap->arr[parent].processingTime < heap->arr[index].processingTime){
+            break;
+        }
         if (heap->arr[parent].processingTime == heap->arr[index].processingTime &&
-            heap->arr[parent].index < heap->arr[index].index) break;
+            heap->arr[parent].index < heap->arr[index].index){
+            break;
+        }
         swap(&heap->arr[parent], &heap->arr[index]);
         index = parent;
     }
@@ -131,14 +135,23 @@ int* getOrder(int** tasks, int tasksSize, int* tasksColSize, int* returnSize) {
 }
 
 int main() {
-    int tasksArr[4][2] = {{1, 2}, {2, 4}, {3, 2}, {4, 1}};
-    int* tasks[4];
-    for (int i = 0; i < 4; i++) {
+    // int tasksArr[4][2] = {{1, 2}, {2, 4}, {3, 2}, {4, 1}};
+    // int* tasks[4];
+    // for (int i = 0; i < 4; i++) {
+    //     tasks[i] = tasksArr[i];
+    // }
+    // int tasksColSize[4] = {2, 2, 2, 2};
+    // int returnSize;
+    // int* result = getOrder(tasks, 4, tasksColSize, &returnSize);
+
+    int tasksArr[5][2] = {{7,10},{7,12},{7,5},{7,4},{7,2}};
+    int* tasks[5];
+    for (int i = 0; i < 5; i++) {
         tasks[i] = tasksArr[i];
     }
-    int tasksColSize[4] = {2, 2, 2, 2};
+    int tasksColSize[5] = {2, 2, 2, 2, 2};
     int returnSize;
-    int* result = getOrder(tasks, 4, tasksColSize, &returnSize);
+    int* result = getOrder(tasks, 5, tasksColSize, &returnSize);
 
     printf("Task execution order: ");
     for (int i = 0; i < returnSize; i++) {

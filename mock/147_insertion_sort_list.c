@@ -67,7 +67,7 @@ void free_list(struct ListNode* head){
 }
 
 int main(){
-    int arr[] = {4, 2, 1, 3};
+    int arr[] = {5, 10, 4, 2, 1, 3};
     int n = sizeof(arr) /sizeof(arr[0]);
 
     struct ListNode* head = create_node(arr[0]);

@@ -33,13 +33,13 @@ int coinChange(int* coins, int coinsSize, int amount) {
 }
 
 int main(){
-    // int coins[] = {1, 2, 5};
-    // int coinsSize = 3;
-    // int amount = 11;
+    int coins[] = {1, 2, 5};
+    int coinsSize = 3;
+    int amount = 11;
 
-    int coins[] = {2};
-    int coinsSize = 1;
-    int amount = 3;
+    // int coins[] = {2};
+    // int coinsSize = 1;
+    // int amount = 3;
 
     int min_change = coinChange(coins, coinsSize, amount);
     if(min_change == -1){

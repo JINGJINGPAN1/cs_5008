@@ -61,7 +61,8 @@ int findKthLargest(int* nums, int numsSize, int k) {
 }
 
 int main() {
-    int nums[] = {3, 3, 3};
+    // int nums[] = {3, 3, 3};
+    int nums[] = {4, 2, 1, 7, 9};
     int k = 2;
     int numsSize = sizeof(nums) / sizeof(nums[0]);
 
